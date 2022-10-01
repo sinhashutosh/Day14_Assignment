@@ -22,8 +22,7 @@ public class LinkedListOperation {
         head = new_node;
     }
 
-    /* Appends a new node at the end.  This method is
-       defined inside LinkedList class shown above */
+    // Appends a new node at the end.
     public void append(int new_data) {
         Node new_node = new Node(new_data);
         if (head == null) {
