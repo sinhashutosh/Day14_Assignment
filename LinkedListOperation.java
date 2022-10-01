@@ -48,7 +48,20 @@ public class LinkedListOperation {
             last = last.next;
         last.next = new_node;
     }
-
+//pop at begining of linked list
+    public void deleteAtStart(Node head){
+        Node temp = head;
+        if (temp == null) {
+            System.out.println("link  list is empty");
+        } else {
+            head = temp.next;
+            Node tempNode = head;
+            while (tempNode != null) {
+                System.out.print(" -> " + tempNode.data);
+                tempNode = tempNode.next;
+            }
+        }
+    }
     public void printList() {
         Node tempNode = head;
         while (tempNode != null) {

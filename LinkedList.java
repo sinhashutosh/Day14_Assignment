@@ -8,7 +8,9 @@ public class LinkedList {
         list.printList();
         System.out.println();
         System.out.println("************************************");
-        list.insertAfter(list.head,56,30);
+        list.insertAfter(list.head, 56, 30);
         list.printList();
+        System.out.println("\n************************************");
+        list.deleteAtStart(list.head);
     }
 }
