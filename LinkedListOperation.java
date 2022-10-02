@@ -5,6 +5,44 @@ import static java.lang.System.exit;
 public class LinkedListOperation {
     Node head;
 
+    public void searchInList(int searchData) {
+        if (head == null) {
+            System.out.println("List is empty");
+        }
+        Node temp = head;
+        boolean ischeck = false;
+        while (temp.next != null) {
+            if (temp.data == searchData) {
+                System.out.println(searchData + " is present in the list");
+                ischeck = true;
+            }
+            temp = temp.next;
+        }
+        if (ischeck == false) {
+            System.out.println(searchData + " is not in the list");
+        }
+    }
+
+    public void sortedList() {
+        if (head == null) {
+            System.out.println("linked list are empty");
+        }
+        Node temp = head;
+        Node index;
+        while(temp !=null) {
+            index = temp.next;
+            while(index != null) {
+                if (temp.data > index.data){
+                    int temps = temp.data;
+                    temp.data = index.data;
+                    index.data = temps;
+                }
+                index = index.next;
+            }
+            temp = temp.next;
+        }
+    }
+
     public class Node {
 
         int data;
@@ -71,7 +109,8 @@ public class LinkedListOperation {
         if (head == null) {
             System.out.println("List is Empty");
             exit(0);
-        } if (head.next == null) {
+        }
+        if (head.next == null) {
             head = null;
             exit(0);
         }

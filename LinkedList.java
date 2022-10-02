@@ -6,13 +6,16 @@ public class LinkedList {
         list.append(56);
         list.append(30);
         list.append(70);
+        list.append(40);
         list.printList();
         System.out.println();
         //System.out.println("************************************");
         //list.insertAfter(list.head, 56, 30);
-       // list.printList();
+        // list.printList();
         System.out.println("\n************************************");
-        list.deleteAtEnd();
+        //  list.deleteAtEnd();
+        // list.searchInList(30);
+        list.sortedList();
         list.printList();
     }
 }
