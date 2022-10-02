@@ -33,6 +33,18 @@ public class QueueUsingLinkedlist {
         currentSize++;
         System.out.println(data + " added to the queue");
     }
+    public int dequeue()
+    {
+        int data = front.data;
+        front = front.next;
+        if (isEmpty())
+        {
+            rear = null;
+        }
+        currentSize--;
+        System.out.println(data+ " removed from the queue");
+        return data;
+    }
     public void printQueue() {
         Node temp = front;
         System.out.println("Linked List :");

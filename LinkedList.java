@@ -7,5 +7,7 @@ public class LinkedList {
         q.enqueue(30);
         q.enqueue(70);
         q.printQueue();
+        q.dequeue();
+        q.printQueue();
     }
 }
