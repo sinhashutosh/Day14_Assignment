@@ -1,5 +1,7 @@
 package org.example;
 
+import static java.lang.System.exit;
+
 public class LinkedListOperation {
     Node head;
 
@@ -48,8 +50,9 @@ public class LinkedListOperation {
             last = last.next;
         last.next = new_node;
     }
-//pop at begining of linked list
-    public void deleteAtStart(Node head){
+
+    //pop at begining of linked list
+    public void deleteAtStart(Node head) {
         Node temp = head;
         if (temp == null) {
             System.out.println("link  list is empty");
@@ -62,6 +65,24 @@ public class LinkedListOperation {
             }
         }
     }
+
+    // pop at the end
+    public void deleteAtEnd() {
+        if (head == null) {
+            System.out.println("List is Empty");
+            exit(0);
+        } if (head.next == null) {
+            head = null;
+            exit(0);
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+            temp.next = null;
+        }
+
+    }
+
     public void printList() {
         Node tempNode = head;
         while (tempNode != null) {
