@@ -4,13 +4,16 @@ import static java.lang.System.exit;
 
 public class StackUsingLinkedlist {
     Node top;
+
     private class Node {
         int data;
         Node link;
     }
+
     public StackUsingLinkedlist() {
         this.top = null;
     }
+
     public void push(int element) {
         Node temp = new Node();
         if (temp == null) {
@@ -20,6 +23,27 @@ public class StackUsingLinkedlist {
         temp.data = element;
         temp.link = top;
         top = temp;
+    }
+
+    public boolean isEmpty() {
+        return top == null;
+    }
+
+    public int peek() {
+        if (!isEmpty()) {
+            return top.data;
+        } else {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+    }
+
+    public void pop() {
+        if (top == null) {
+            System.out.print("\nStack Underflow");
+            exit(0);
+        }
+        top = (top).link;
     }
 
     public void display() {
@@ -33,8 +57,5 @@ public class StackUsingLinkedlist {
                 temp = temp.link;
             }
         }
-
     }
-
-
 }

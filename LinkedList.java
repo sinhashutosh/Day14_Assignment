@@ -7,5 +7,15 @@ public class LinkedList {
         obj.push(30);
         obj.push(56);
         obj.display();
+        System.out.println("\npeek element = " + obj.peek());
+        obj.pop();
+        obj.display();
+        System.out.println("\npeek element = " + obj.peek());
+        obj.pop();
+        obj.display();
+        System.out.println("\npeek element = " + obj.peek());
+        obj.pop();
+        System.out.println("\npeek element = " + obj.peek());
+        obj.display();
     }
 }
